@@ -1,0 +1,39 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		<%=@publictimeline.text%>
+	</h1>
+</div>
+
+<div class="panel" selected="true">
+
+<a class="button right_button" href="<%=url_for(:action => :edit, :id => @publictimeline.object)%>" target="_self">Edit</a>
+
+<table class="grid">
+  
+  <tr>
+	<td class="gridleft">Text</td>
+    <td class="gridright"><%=@publictimeline.text%></td>
+  </tr>
+  
+  <tr>
+	<td class="gridleft">UserScreenName</td>
+    <td class="gridright"><%=@publictimeline.user_screen_name%></td>
+  </tr>
+  
+  <tr>
+	<td class="gridleft">UserName</td>
+    <td class="gridright"><%=@publictimeline.user_name%></td>
+  </tr>
+  
+  <tr>
+	<td class="gridleft">UserProfileImageUrl</td>
+    <td class="gridright"><%=@publictimeline.user_profile_image_url%></td>
+  </tr>
+  
+  <tr>
+	<td class="gridleft">Source</td>
+    <td class="gridright"><%=@publictimeline.source%></td>
+  </tr>
+  
+</table>
+</div>

@@ -1,0 +1,47 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		Edit <%=@publictimeline.text%>
+	</h1>
+</div>
+
+<form title="Edit PublicTimeLine" 
+	  class="panel" 
+	  id="publictimeline_edit_form" 
+	  method="POST" 
+	  action="<%=url_for(:action => :update)%>" selected="true">
+	<fieldset>
+		<input type="hidden" name="id" value="<%=@publictimeline.object%>"/>
+		
+		  <div class="row">
+			  <label>Text: </label>
+			  <input type="text" name="publictimeline[text]" value="<%=@publictimeline.text%>"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>User screen name: </label>
+			  <input type="text" name="publictimeline[user_screen_name]" value="<%=@publictimeline.user_screen_name%>"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>User name: </label>
+			  <input type="text" name="publictimeline[user_name]" value="<%=@publictimeline.user_name%>"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>User profile image url: </label>
+			  <input type="text" name="publictimeline[user_profile_image_url]" value="<%=@publictimeline.user_profile_image_url%>"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Source: </label>
+			  <input type="text" name="publictimeline[source]" value="<%=@publictimeline.source%>"/>
+		  </div>
+		
+	</fieldset>
+	<input type="submit" value="Update"/>
+	<p align="center">
+		<a href="<%=url_for(:action => :delete, :id => @publictimeline.object)%>">
+			<font color="#990000">Delete</font>
+		</a>
+	</p>
+</form>

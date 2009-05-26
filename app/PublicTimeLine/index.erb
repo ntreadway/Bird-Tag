@@ -1,0 +1,14 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		PublicTimeLines
+	</h1>
+</div>
+<ul id="publictimelines" title="PublicTimeLines">
+<%@publictimelines.each do |x|%>
+  <li class ="row">
+    <img src=<%= x.user_profile_image_url %> alt=<%= x.user_screen_name %> />
+     <%= x.text %>
+     <%= x.user_name %> <%= x.created_at %> via <%= x.source %>
+  </li>
+<%end%>
+</ul>
